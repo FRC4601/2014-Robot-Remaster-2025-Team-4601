@@ -14,8 +14,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-//import edu.wpi.first.wpilibj.motorcontrol.Victor;
-import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
+import edu.wpi.first.wpilibj.motorcontrol.Victor;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -36,25 +35,15 @@ public class Robot extends TimedRobot {
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
 
-   //Motors VictorSP (comment out or delete when swapping VictorSP motor controllers back to Victor888 on the robot)
-   private final VictorSP frontleftMotor = new VictorSP(1);
-   private final VictorSP backleftMotor = new VictorSP(2);
-   private final VictorSP frontrightMotor = new VictorSP(3);
-   private final VictorSP backrightMotor = new VictorSP(4);
-   private final VictorSP spinMotor = new VictorSP(5);
-   private final VictorSP winchMotor = new VictorSP(6);
-   private final VictorSP pickupMotor = new VictorSP(7);
-   private final VictorSP flapperMotor = new VictorSP(8);
-
-   //Motor Victor888 (uncomment when swapping VictorSP motor controllers back to Victor888 on the robot)
-  //  private final Victor frontleftMotor = new Victor(1);
-  //  private final Victor backleftMotor = new Victor(2);
-  //  private final Victor frontrightMotor = new Victor(3);
-  //  private final Victor backrightMotor = new Victor(4);
-  //  private final Victor spinMotor = new Victor(5);
-  //  private final Victor winchMotor = new Victor(6);
-  //  private final Victor pickupMotor = new Victor(7);
-  //  private final Victor flapperMotor = new Victor(8);
+   //Motor Victor888 Motor Controller
+   private final Victor frontleftMotor = new Victor(1);
+   private final Victor backleftMotor = new Victor(2);
+   private final Victor frontrightMotor = new Victor(3);
+   private final Victor backrightMotor = new Victor(4);
+   private final Victor spinMotor = new Victor(5);
+   private final Victor winchMotor = new Victor(6);
+   private final Victor pickupMotor = new Victor(7);
+   private final Victor flapperMotor = new Victor(8);
 
    //Drivetrain 
    private DifferentialDrive m_drive;
